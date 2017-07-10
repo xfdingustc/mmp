@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MarvellMediaTest-II</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="grey">#666666</color>
+    <item type="layout" name="function_area"/>
+    <item type="layout" name="work_area"/>
+    <item type="layout" name="right_area"/>
+    <color name="blue">#0000FF</color>
+    <color name="darkblue">#001F56</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="green">#00FF00</color>
+    <color name="red">#FF0000</color>
+    <color name="purple">#800080</color>
+    <string name="play_button_text">play</string>
+    <string name="log_output">Log</string>
+    <string name="bat">BAT</string>
+    <string name="smoke">Smoke</string>
+    <string name="refresh_text">Fresh</string>
+    <string name="monitor">Monitor</string>
+    <string name="audios">Audios</string>
+    <string name="subtitles">Subtitles</string>
+</resources>

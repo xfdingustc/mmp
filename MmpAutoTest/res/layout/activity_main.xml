@@ -1,0 +1,131 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/work_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/function_area"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+            <LinearLayout
+                android:id="@+id/tabhost"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/grey"
+                android:orientation="horizontal" >
+            </LinearLayout>
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="11">
+            </android.support.v4.view.ViewPager>
+        </LinearLayout>
+
+        <View android:layout_width="3dip"
+            android:layout_height="fill_parent"
+            android:background="?android:attr/listDivider" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical" >
+
+            <fragment class="com.marvell.mmpautotest.VideoFragment"
+                android:id="@+id/videofragment"
+                android:layout_width="match_parent"
+                android:layout_height="324dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/log_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_alignParentLeft="true"
+                    android:orientation="vertical" >
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/log_output" />
+
+
+                    <ScrollView
+                        android:id="@+id/log_scroll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/grey"
+                        android:transcriptMode="alwaysScroll"  >
+                        <TextView
+                            android:id="@+id/log_output"
+                            android:layout_width="match_parent"
+                            android:layout_height="fill_parent"
+                            android:transcriptMode="alwaysScroll"
+                            android:background="@color/grey"
+                            android:textColor="@color/darkblue"
+                            android:textSize="10dp"
+                            android:textStyle="bold" >
+                        </TextView>
+                    </ScrollView>
+                </LinearLayout>
+
+                <View android:layout_width="3dip"
+                    android:layout_height="fill_parent"
+                    android:background="?android:attr/listDivider" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_alignParentRight="true"
+                    android:orientation="vertical" >
+                    <TextView
+                        android:id="@+id/monitor_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/monitor" />
+
+                    <ScrollView
+                        android:id="@+id/monitor_scroll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/grey"
+                        android:transcriptMode="alwaysScroll"  >
+                        <TextView
+                            android:id="@+id/monitor"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/grey"
+                            android:textColor="@color/red"
+                            android:textSize="10dp"
+                            android:textStyle="bold" >
+                        </TextView>
+                    </ScrollView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

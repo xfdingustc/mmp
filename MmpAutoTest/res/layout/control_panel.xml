@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:orientation="horizontal"
+    android:layout_alignParentBottom="true">
+
+    <ImageButton
+        android:id="@+id/play_pause_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="#00000000"
+        android:scaleType="fitCenter"
+        android:src="@drawable/pause_button"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/media_seek_bar" />
+
+    <ImageButton
+        android:id="@+id/stop_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:scaleType="fitCenter"
+        android:background="#00000000"
+        android:src="@drawable/stop_button"
+        android:layout_above="@+id/media_seek_bar"
+        android:layout_toLeftOf="@+id/play_pause_button"
+        android:layout_marginRight="15dp" />
+
+    <ImageButton
+        android:id="@+id/volume_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="#00000000"
+        android:scaleType="fitCenter"
+        android:src="@drawable/volume_btn"
+        android:layout_above="@+id/media_seek_bar"
+        android:layout_toRightOf="@+id/play_pause_button"
+        android:layout_marginLeft="15dp" />
+
+    <SeekBar
+        android:id="@+id/volume_bar"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_above="@+id/media_seek_bar"
+        android:layout_toRightOf="@+id/volume_btn" />
+
+    <SeekBar
+        android:id="@+id/media_seek_bar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
+
+    <TextView
+        android:id="@+id/media_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/media_seek_bar"
+        android:layout_marginRight="15dp"
+        android:layout_alignParentBottom="true"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/media_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/media_seek_bar"
+        android:layout_marginLeft="15dp"
+        android:layout_alignParentBottom="true"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/audios"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:text="@string/audios"
+        android:textSize="10dp"
+        android:textColor="@color/red"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentBottom="true" />
+
+    <ListView
+        android:id="@+id/audio_listview"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/audios"
+        android:layout_alignLeft="@+id/audios"
+        android:textSize="10dp" />
+
+    <TextView
+        android:id="@+id/subtitles"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:text="@string/subtitles"
+        android:textColor="@color/red"
+        android:textSize="10dp"
+        android:layout_toRightOf="@+id/audios"
+        android:layout_alignParentBottom="true" />
+
+    <ListView
+        android:id="@+id/subtitle_listview"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/subtitles"
+        android:layout_alignLeft="@+id/subtitles"
+        android:textSize="10dp" >
+
+    </ListView>
+</RelativeLayout>

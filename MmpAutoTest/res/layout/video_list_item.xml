@@ -1,0 +1,3 @@
+<TextView android:id="@+id/video_list_item"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/video_list_item_text" />

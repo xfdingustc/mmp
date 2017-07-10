@@ -1,0 +1,3 @@
+<TextView android:id="@+id/substream_list_item"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/substream_list_item_text" />

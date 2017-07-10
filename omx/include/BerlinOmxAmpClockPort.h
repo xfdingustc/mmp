@@ -1,0 +1,43 @@
+/*
+**                Copyright 2013, MARVELL SEMICONDUCTOR, LTD.
+** THIS CODE CONTAINS CONFIDENTIAL INFORMATION OF MARVELL.
+** NO RIGHTS ARE GRANTED HEREIN UNDER ANY PATENT, MASK WORK RIGHT OR COPYRIGHT
+** OF MARVELL OR ANY THIRD PARTY. MARVELL RESERVES THE RIGHT AT ITS SOLE
+** DISCRETION TO REQUEST THAT THIS CODE BE IMMEDIATELY RETURNED TO MARVELL.
+** THIS CODE IS PROVIDED "AS IS". MARVELL MAKES NO WARRANTIES, EXPRESSED,
+** IMPLIED OR OTHERWISE, REGARDING ITS ACCURACY, COMPLETENESS OR PERFORMANCE.
+**
+** MARVELL COMPRISES MARVELL TECHNOLOGY GROUP LTD. (MTGL) AND ITS SUBSIDIARIES,
+** MARVELL INTERNATIONAL LTD. (MIL), MARVELL TECHNOLOGY, INC. (MTI), MARVELL
+** SEMICONDUCTOR, INC. (MSI), MARVELL ASIA PTE LTD. (MAPL), MARVELL JAPAN K.K.
+** (MJKK), MARVELL ISRAEL LTD. (MSIL).
+*/
+
+
+#ifndef BERLIN_OMX_AMP_CLOCK_PORT_H_
+#define BERLIN_OMX_AMP_CLOCK_PORT_H_
+
+extern "C" {
+#include <amp_buf_desc.h>
+#include <amp_client_support.h>
+#include <amp_component.h>
+#include <OSAL_api.h>
+}
+#include <BerlinOmxAmpPort.h>
+
+using namespace std;
+
+namespace berlin {
+
+class OmxAmpClockPort : public OmxAmpPort{
+public:
+  OmxAmpClockPort();
+  OmxAmpClockPort(OMX_U32 index, OMX_DIRTYPE dir);
+  virtual ~OmxAmpClockPort();
+  void updateDomainParameter();
+  void updateDomainDefinition();
+
+};
+
+}; // namespace berlin
+#endif // BERLIN_OMX_AMP_CLOCK_PORT_H_

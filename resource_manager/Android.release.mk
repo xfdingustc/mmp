@@ -1,0 +1,25 @@
+LOCAL_PATH := $(TARGET_COMMON_PREBUILT_TOP)/resource_manager
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := librmclient
+LOCAL_SRC_FILES := librmclient.so
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := librmservice
+LOCAL_SRC_FILES := librmservice.so
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := resourcemanager
+LOCAL_SRC_FILES := resourcemanager
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX :=
+LOCAL_MODULE_CLASS := EXECUTABLES
+include $(BUILD_PREBUILT)

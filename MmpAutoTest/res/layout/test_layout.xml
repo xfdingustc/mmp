@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/bat"
+        android:gravity="center_horizontal">
+
+        <ImageButton
+            android:id="@+id/bat_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitCenter"
+            android:layout_alignParentTop="true"
+            android:background="#00000000"
+            android:src="@drawable/bat_button" />
+
+        <TextView
+            android:id="@+id/bat"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="@string/bat"
+            android:gravity="center"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/smoke"
+        android:layout_toRightOf="@id/bat"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_horizontal">
+
+        <ImageButton
+            android:id="@+id/smoke_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitCenter"
+            android:layout_alignParentTop="true"
+            android:background="#00000000"
+            android:src="@drawable/smoke_button" />
+
+        <TextView
+            android:id="@+id/bat"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="@string/smoke"
+            android:gravity="center" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/test_control_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <ProgressBar
+            android:id="@+id/test_progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

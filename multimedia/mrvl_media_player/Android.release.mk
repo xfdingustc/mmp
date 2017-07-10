@@ -1,0 +1,36 @@
+LOCAL_PATH := $(TARGET_COMMON_PREBUILT_TOP)/mrvl_media_player
+
+ifeq ($(PLATFORM_SDK_VERSION),19)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libmrvl_media_player
+LOCAL_SRC_FILES := libmrvl_media_player.so
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)
+LOCAL_REQUIRED_MODULES :=     \
+    libonline_debug           \
+    libmrvl_httplive          \
+    libmmu
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libonline_debug
+LOCAL_SRC_FILES := libonline_debug.so
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libmrvl_httplive
+LOCAL_SRC_FILES := libmrvl_httplive.so
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)
+include $(BUILD_PREBUILT)
+
+endif
